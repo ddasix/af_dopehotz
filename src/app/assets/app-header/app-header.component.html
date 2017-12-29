@@ -1,0 +1,130 @@
+<div id="header">
+    <div class="header_width">
+        <a routerLink="/" routerLinkActive="active">
+            <div class="logo"></div>
+        </a>
+        <ul class="menu_list_wrap">
+            <li>
+                <a routerLink="/onstage" routerLinkActive="active">ON STAGE</a>
+            </li>
+            <li>
+                <a routerLink="/openmic" routerLinkActive="active">OPEN MIC</a>
+            </li>
+            <li>
+                <a routerLink="/" routerLinkActive="active">SHOUT OUT</a>
+            </li>
+        </ul>
+        <a class="search_btn"></a>
+        <div class="btn_wrap_r" *ngIf="isLogin">
+            <div class="profile_btn" style="background-image:url(https://i1.sndcdn.com/artworks-qz6zfZHjQx46-0-t200x200.jpg)">
+                <div class="user_name_h">닉네임
+                    <img class="user_menu_btn" src="/assets/img/down-arrow.png" />
+                </div>
+            </div>
+        </div>
+        <div class="btn_wrap_r" *ngIf="!isLogin"> 
+            <div class="login_btn" >
+                <a href="https://auth.dopehotz.com/" class="header_login_btn">로그인</a>
+            </div>
+        </div>
+
+        <div class="toggle_menu_h">
+            <ul>
+                <li>
+                    <a routerLink="/user/userid/" routerLinkActive="active">PROFILE</a>
+                </li>
+                <li>
+                    <a routerLink="/track/post/" routerLinkActive="active">POST TRACK</a>
+                </li>
+                <li>
+                    <a>HELP</a>
+                    <div>
+                        <a class="toggle_menu_sub" routerLink="/" routerLinkActive="active">의견보내기</a>
+                        <a class="toggle_menu_sub" routerLink="/" routerLinkActive="active">저작권 신고</a>
+                    </div>
+                </li>
+                <li>
+                    <a routerLink="/" routerLinkActive="active">DONATE</a>
+                </li>
+                <li>
+                    <a href="https://auth.dopehotz.com/">LOGOUT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 모바일 버전 헤더 -->
+<div id="header_m">
+    <a routerLink="/" routerLinkActive="active">
+        <div class="logo_m"></div>
+    </a>
+    <div class="menu_btn_m"></div>
+    <a href="#" class="search_btn_m"></a>
+</div>
+<div class="page_wrap" onclick="history.back();"></div>
+<div class="menu_m">
+    <div class="profile_m">
+        <div class="profile_logon_m " style="background-image:url(https://i1.sndcdn.com/artworks-qz6zfZHjQx46-0-t200x200.jpg)">
+            <a routerLink="/profile" routerLinkActive="active" class="mobile_click">닉네임</a>
+        </div>
+    </div>
+    <ul class="menu_list_m">
+        <li>
+            <a routerLink="/track/post" routerLinkActive="active" class="mobile_click">POST TRACK</a>
+        </li>
+        <li class="menu_spacer"></li>
+        <li>
+            <a routerLink="/" routerLinkActive="active" class="mobile_click">HOME</a>
+        </li>
+        <li>
+            <a routerLink="/onstage" routerLinkActive="active" class="mobile_click">ON STAGE</a>
+        </li>
+        <li>
+            <a routerLink="/openmic" routerLinkActive="active" class="mobile_click">OPEN MIC</a>
+        </li>
+        <!-- <li><a routerLink="/" routerLinkActive="active">MIXTAPE</a></li> -->
+        <li>
+            <a routerLink="/" routerLinkActive="active" class="mobile_click">SHOUT OUT</a>
+        </li>
+        <li>
+            <a>HELP</a>
+            <div>
+                <a class="toggle_menu_sub" routerLink="/" routerLinkActive="active">의견보내기</a>
+                <a class="toggle_menu_sub" routerLink="/" routerLinkActive="active">저작권신고</a>
+            </div>
+        </li>
+        <li>
+            <a routerLink="/" routerLinkActive="active">DONATE</a>
+        </li>
+        <li>
+            <a routerLink="/" routerLinkActive="active">LOGOUT</a>
+        </li>
+    </ul>
+</div>
+<!-- 검색창 -->
+<form class="search_wrap">
+    <input type="search" name="search_track" placeholder="키워드를 입력하세요.">
+    <div class="seach_cate">
+        <span>
+            <input type="radio" id="all" name="search_cate" checked />
+            <label for="all">ALL TRACK</label>
+        </span>
+        <span>
+            <input type="radio" id="openmic" name="search_cate" />
+            <label for="openmic">SHOUT OUT</label>
+        </span>
+    </div>
+    <button class="search_submit">검색</button>
+    <div class="search_close_btn" onclick="history.back();"></div>
+</form>
+<!-- 토스트 알럿 -->
+<div class="dope_alert" style="display:none;">
+    <p>감사합니다.</p>
+</div>
+<!-- <h1>{{title}}</h1>
+<nav> -->
+<!-- <a href="#" [routerLink]="['/login']">ajax</a> -->
+<!-- <a routerLink="/login" routerLinkActive="active">Login</a>
+  <a routerLink="/dashboard" routerLinkActive="active">Dashboard4</a> -->
+<!-- </nav> -->

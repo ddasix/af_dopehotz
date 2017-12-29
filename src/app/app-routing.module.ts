@@ -1,9 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { OnStageComponent } from './on-stage/on-stage.component';
 import { OpenMicComponent } from './open-mic/open-mic.component';
@@ -24,45 +21,30 @@ import { AppHeaderComponent } from './assets/app-header/app-header.component';
 import { AppPlayerComponent } from './assets/app-player/app-player.component';
 import { LoginUserComponent } from './user/login-user/login-user.component';
 import { ShareTrackComponent } from './track/share-track/share-track.component';
-import { AssetTrackItemComponent } from './assets/list/asset-track-item/asset-track-item.component';
-import { AssetReplyComponent } from './assets/list/asset-reply/asset-reply.component';
-import { ListPostComponent } from './post/list-post/list-post.component';
-import { AssetPostComponent } from './assets/list/asset-post/asset-post.component';
-import { AppService } from './app.service';
 
+const routes: Routes = [
+  { path: '', component: HomeComponent }
+  , { path: 'openmic', component: OpenMicComponent }
+  , { path: 'home', component: HomeComponent }
+  , { path: 'onstage', component: OnStageComponent }
+  , { path: 'user/userid', component: IndexUserComponent }
+  , { path: 'user/modify', component: EditUserComponent }
+  , { path: 'track/tracknum', component: IndexTrackComponent }
+  , { path: 'track/edit/tracknum', component: EditTrackComponent }
+  , { path: 'track/post', component: CreateTrackComponent }
+  , { path: 'shoutout/articlenum', component: IndexPostComponent }
+  , { path: 'shoutout/edit/articlenum', component: EditPostComponent }
+  , { path: 'shoutout/post', component: CreatePostComponent }
+  , { path: 'search/keyword', component: SearchComponent }
+  , { path: 'track/share', component: ShareTrackComponent }
+];
 
 @NgModule({
-  declarations: [
-    AppComponent
-    , HomeComponent
-    , OnStageComponent
-    , OpenMicComponent
-    , IndexUserComponent
-    , EditUserComponent
-    , CreateUserComponent
-    , IndexTrackComponent
-    , EditTrackComponent
-    , CreateTrackComponent
-    , IndexPostComponent
-    , EditPostComponent
-    , CreatePostComponent
-    , SearchComponent
-    , AssetFeedComponent
-    , AssetOnStageComponent
-    , AssetOpenMicComponent
-    , AppHeaderComponent
-    , AppPlayerComponent
-    , LoginUserComponent
-    , ShareTrackComponent
-    , AssetTrackItemComponent
-    , AssetReplyComponent, ListPostComponent, AssetPostComponent
-  ],
-  imports: [
-    BrowserModule
-    , AppRoutingModule
-    , HttpModule
-  ],
-  providers: [HttpModule, AppService],
-  bootstrap: [AppComponent]
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ],
+  declarations: []
 })
-export class AppModule { }
+export class AppRoutingModule {
+    constructor() {
+    }
+}

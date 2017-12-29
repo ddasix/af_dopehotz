@@ -1,0 +1,12 @@
+<ul>
+  <li class="onstage_con" *ngFor="let i of tracks">
+    <img src="{{i.image_url}}">
+    <a routerLink="/track/tracknum/" routerLinkActive="active" class="subject_wrap">
+      <p class="subject_title">{{i.title}}</p>
+      <p class="subject_artist">{{i.user.username}}</p>
+    </a>
+    <p class="onstage_con_playtime">0:00</p>
+    <div class="onstage_con_play play_trigger rateit" data-play="플레이 메시지" data-tracknum="337683795"></div>
+  </li>
+</ul>
+ 

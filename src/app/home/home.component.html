@@ -1,0 +1,94 @@
+<!-- 토스트 알럿 -->
+<div class="dope_alert" style="display:none;">
+    <p>감사합니다.</p>
+</div>
+<div id="container">
+    <div class="main_carousel">
+        <h2 class="sub_title">NEW STAGE</h2>
+        <ul class="top_carousel">
+            <li class="top_carousel_item" *ngFor="let i of tracks; let start=index; let end=last">
+                <img src="{{i.image_url}}">
+                <a href="#" class="carousel_track_info">
+                    <p class="carousel_track_title">{{i.title}}</p>
+                    <p class="carousel_track_artist">{{i.user.username}}</p>
+                </a>
+                <div class="top_carousel_play play_trigger" [attr.data-tracknum]='i.track_id'>
+                    <img class="play_btn_img" src="/assets/img/play.png">
+                </div>
+                <div style="display:none" *ngIf="start+1 == tracks.length">{{carousel()}}</div>
+            </li>
+            <!-- <li class="top_carousel_item">
+          <img src="https://i1.sndcdn.com/artworks-000228064117-w6cmmr-t500x500.jpg">
+          <a routerLink="/track/detail" routerLinkActive="active" class="carousel_track_info">
+              <p class="carousel_track_title">Confidence w/ Neguim</p>
+              <p class="carousel_track_artist">RIVR</p>
+          </a>
+          <div class="top_carousel_play play_trigger rateit" data-play="플레이 메시지" data-tracknum="288681063">
+              <img class="play_btn_img" src="/assets/img/play.png">
+          </div>
+      </li> -->
+        </ul>
+    </div>
+    <div class="main_content">
+        <div class="main_onstage">
+            <div class="page_width">
+                <div class="main_middle_column">
+                    <h2 class="sub_title">TOP5 ON STAGE
+                        <span class="n_stage_week">8월 4주차</span>
+                    </h2>
+                    <div class="onstage_con_wrap">
+                        <app-asset-on-stage></app-asset-on-stage>
+                    </div>
+                </div>
+                <div class="main_middle_column">
+                    <h2 class="sub_title">SHOUT OUT</h2>
+                    <div class="shoutout_con_wrap">
+                        <ul class="shoutout_main_list">
+                            <li>
+                                <a href="#" class="shoutout_main_item">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="shoutout_main_item"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="shoutout_main_item"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="shoutout_main_item"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="shoutout_main_item"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="shoutout_main_item"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="shoutout_main_item"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="shoutout_main_item"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_spacer">
+            <h3>지금 내 트랙을 공개하세요.</h3>
+            <p>#새로운_발견 #무한한_영감</p>
+            <a>내 트랙 공개하기</a>
+        </div>
+        <div class="main_openmic">
+            <div class="page_width">
+                <h2 class="sub_title">OPEN MIC
+                    <span>지금 공개된 트랙</span>
+                </h2>
+                <div class="openmic_con_wrap">
+                    <app-asset-open-mic></app-asset-open-mic>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

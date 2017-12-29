@@ -1,0 +1,112 @@
+<div id="container">
+    <div class="sub_main">
+        <h2>프로필 수정</h2>
+        <p>팬들에게 나를 표현해 보세요.</p>
+        <a>저장하기</a>
+    </div>
+    <div class="profile_layout">
+        <div class="profile_wrap">
+            <div class="profile_card">
+                <div class="profile_top_wrap">
+                    <div class="profile_top">
+                        <div class="profile_top_img" style="background-image: url(https://i1.sndcdn.com/avatars-000289816634-ffh7qa-t500x500.jpg);">
+                            <div class="top_artwork_play play_trigger" data-tracknum="295691453">
+                                <img class="play_btn_img" src="/assets/img/play.png" />
+                            </div>
+                        </div>
+                        <h2>닉네임</h2>
+                        <span class="profile_position">팀명</span>
+                        <div class="profile_itrctn">
+                            <a href="#" class="follow_user checked">follow</a>
+                        </div>
+                        <span class="profile_location">지역</span>
+                        <p>소갯말</p>
+                        <div class="profile_social_wrap">
+                            <ul>
+                                <li>
+                                    <dd>팔로워수</dd>
+                                    <dt>FANATIC</dt>
+                                </li>
+                                <li>
+                                    <dd>총 재생수</dd>
+                                    <dt>PLAY</dt>
+                                </li>
+                                <li>
+                                    <dd>좋 좋아요수</dd>
+                                    <dt>LIKE</dt>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modify_form_wrap">
+                <h5>아티스트 BIO</h5>
+                <div class="modify_form">
+                    <div>
+                        <label for="name">닉네임</label>
+                        <input type="text" id="nick" name="name" value="이 유저의 닉네임" />
+                    </div>
+                    <div>
+                        <label for="crew">소속사 혹은 활동하는 크루</label>
+                        <input type="text" id="crew" name="crew" value="기본값은 '내 소속을 알려주세요.'" />
+                    </div>
+                    <div>
+                        <label for="location">활동지역</label>
+                        <input type="text" id="location" name="location" value="사클에서 가지고 온 지역 값이 없을 경우 '-' 로 표시" />
+                    </div>
+                    <div>
+                        <label for="artistbio">아티스트 소개 (최대 600자)</label>
+                        <textarea id="artistbio" name="artistbio" value="Travis Scott" maxlength="600">값이 없을때는 '나를 표현할 수 있는 소갯말을 작성해세요.' 로 입력해 놓고 이미 값이 있는 경우 해당 내용 표시</textarea>
+                    </div>
+
+                </div>
+                <h5>감사 메시지</h5>
+                <div class="modify_form">
+                    <div>
+                        <label for="thxdope">DOPE 감사 메시지</label>
+                        <input type="text" id="thxdope" name="thxdope" value="기본값은 '감사합니다.'" />
+                    </div>
+                    <div>
+                        <label for="thxclip">PLAY 감사 메시지</label>
+                        <input type="text" id="thxplay" name="thxclip" value="기본 값은 '감사합니다.'" />
+                    </div>
+                </div>
+                <h5>계정 정보</h5>
+                <div class="modify_form">
+                    <div>
+                        <label for="naverid">계정 유형</label>
+                        <input type="text" id="accounttype" name="naverid" value="네이버" disabled />
+                        <!-- 소셜 아이디 유형 -->
+                    </div>
+                    <div>
+                        <label for="naverid">이메일</label>
+                        <input type="text" id="accountemail" name="naverid" value="abc@def.com" disabled />
+                        <!-- 소셜 아이디 유형 -->
+                    </div>
+                    <div>
+                        <label for="sndcleid">사운드클라우드 ID</label>
+                        <input type="text" id="sndcleid" name="sndcleid" value="biggerbig" disabled />
+                        <!-- 사운드 클라우드 ID 입력 -->
+                        <a class="conect_snd">뮤지션 등록</a>
+                    </div>
+                </div>
+                <h5>계정 등급</h5>
+                <div class="modify_form">
+                    <div>
+                        <label for="accgrade">계정 등급</label>
+                        <input type="text" id="accgrade" name="accgrade" value="OFFICIAL" disabled />
+                        <!-- 계정 등금은 3가지
+								1. under - 일반적으로 회원가입 이후 지정되는 계정 등급
+								2. major - 계정 점수가 일정 이상 되면 지정됨 / 트랙 공유시 온스테이지로 바로 업로드 됩
+								3. official - 회사 또는 팀의 공식 계정으로 등록된 계정 / 신청 받아서 수종으로 전환 할 예정 / 트랙 공유시 온스테이지로 바로 업로드 됨
+                        	-->
+                    </div>
+                </div>
+                <div class="delete_acc">
+                    <a href="#">계정을 삭제하고 싶으신가요?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

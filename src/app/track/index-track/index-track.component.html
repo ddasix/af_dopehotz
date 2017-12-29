@@ -1,0 +1,80 @@
+<div id="container">
+  <div class="detail_top">
+    <div class="top_artwork_wrap">
+      <div class="top_artwork" style="background-image:url(https://i1.sndcdn.com/artworks-000222277837-rcmbe7-t500x500.jpg)">
+        <div class="top_artwork_play play_trigger rateit" data-play="플레이 메시지" data-tracknum="295691453">
+          <img class="play_btn_img" src="/assets/img/play.png">
+        </div>
+      </div>
+      <div class="top_track_info">
+        <h5 class="detail_title">곡제목</h5>
+        <p class="author">닉네임</p>
+      </div>
+      <div class="detail_feedback_like rateit dope" data-dope="옙"></div>
+      <div class="detail_feedback">
+        <span class="play_rate_btn"><p></p><a>재생횟수</a></span>
+        <span class="dope_btn"><p></p><a>좋아요횟수</a></span>
+        <span class="comnt_btn"><p></p><a>댓글수</a></span>
+      </div>
+    </div>
+  </div>
+  <div class="detail_bottom">
+    <div class="page_width">
+      <div class="detail_body">
+        <p class="detail_postdate" style="color:#444; margin-right:5px;">POSTED AT</p>
+        <p class="detail_postdate">2017.09.20 23:18 //작성시간</p>
+        <a class="open_lyrics">가사보기</a>
+        <a class="detail_menu"></a>
+        <ul class="owner_btn">
+          <li><a href="#" onclick="//게시물 신고 명령">신고</a></li>
+          <!-- 게시물 소유자만 노출 -->
+          <li><a href="#" onclick="//게시물 수정 명령">수정</a></li>
+          <li><a href="#" onclick="//게시물 삭제 명령">삭제</a></li>
+          <!-- 게시물 소유자만 노출 -->
+        </ul>
+        <div class="detail_article">
+          <p>본문 들어가는 영역</p>
+        </div>
+        <div class="layer_pop_wrap">
+          <div class="detail_lyrics_title">
+            <h5 class="detail_title">곡제목</h5>
+            <p class="author">닉네임</p>
+          </div>
+          <div class="detail_lyrics">
+            <p>가사영역</p>
+          </div>
+        </div>
+      </div>
+      <div class="hashtag_wrap">
+        <span class="hash">#해시태그1</span>
+        <span class="hash">#해시태그2</span>
+      </div>
+    </div>
+    <div class="author_wrap">
+      <div class="author_wrap_inner">
+        <img class="author_profile_img" src="https://i1.sndcdn.com/avatars-000149216752-53eb05-t120x120.jpg" />
+        <span>
+           <strong>ARTIST IS</strong>
+           <p class="author">닉네임</p>
+        </span>
+        <a class="author_follow">follow</a>
+      </div>
+      <app-asset-track-item></app-asset-track-item>
+    </div>
+    <div class="comnt_wrap">
+      <div class="comnt_floatframe">
+        <div class="comnt_input_wrap">
+          <input type="text" id="comment" name="comment" class="comnt_text_input" placeholder="이 트랙에 대한 의견을 남겨주세요." rows="1" required maxlength="150">
+          <button class="comnt_submit"></button>
+        </div>
+      </div>
+      <app-asset-reply></app-asset-reply>
+    </div>
+    <div class="openmic_con_wrap_detail page_width">
+      <h2 class="sub_title">지금 주목받는 트랙</h2>
+      <!-- 상세페이지 카테고리에 따라 표시 되는 리스트 다름 -->
+      <app-asset-on-stage></app-asset-on-stage>
+      <app-asset-open-mic></app-asset-open-mic>
+    </div>
+  </div>
+</div>
